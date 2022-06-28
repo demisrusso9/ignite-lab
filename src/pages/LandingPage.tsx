@@ -2,6 +2,7 @@ import { FormEvent, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { Logo } from '../components/Logo'
 import { useCreateSubscriptionMutation } from '../graphql/generated'
+import codeImage from '../assets/code-image.png'
 
 export function LandingPage() {
   const [name, setName] = useState('')
@@ -73,7 +74,7 @@ export function LandingPage() {
         </div>
       </div>
 
-      <img src='/src/assets/code-image.png' className='mt-10' alt='' />
+      <img src={codeImage} className='mt-10' alt='' />
     </div>
   )
 }
