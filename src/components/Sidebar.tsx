@@ -9,6 +9,10 @@ interface SidebarProps {
 export function Sidebar({ isMenuOpen, toggleSidebar }: SidebarProps) {
   const { data } = useGetLessonsQuery()
 
+  if (!isMenuOpen) {
+    return <div />
+  }
+
   return (
     isMenuOpen && (
       <aside
