@@ -31,7 +31,7 @@ export function Video({ lessonSlug }: VideoProps) {
       </div>
 
       <div className='p-8 max-w-[1100px] mx-auto'>
-        <section className='flex items-start gap-16'>
+        <section className='flex items-start gap-16 mobile:flex-col'>
           <div className='flex-1'>
             <h1 className='text-2xl font-bold'>{data.lesson.title}</h1>
 
@@ -60,13 +60,13 @@ export function Video({ lessonSlug }: VideoProps) {
             )}
           </div>
 
-          <div className='flex flex-col gap-4'>
+          <div className='flex flex-col gap-4 mobile:w-full'>
             <ButtonLink variant='primary' link='#' />
             <ButtonLink variant='secondary' link='#' />
           </div>
         </section>
 
-        <section className='gap-8 mt-20 grid grid-cols-2'>
+        <section className='gap-8 mt-20 grid grid-cols-2 mobile:flex flex-col'>
           <Card
             icon='fileArrow'
             title='Material complementar'

@@ -3,6 +3,11 @@ module.exports = {
   content: ['./src/**/*.tsx'],
   theme: {
     extend: {
+      screens: {
+        mobile: { raw: '(max-width:720px)' },
+        tablet: { raw: '(max-width:640px)' },
+        desktop: { raw: '(max-width:1280px)' }
+      },
       fontFamily: {
         sans: 'Roboto, sans-serif'
       },

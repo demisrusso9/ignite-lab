@@ -12,7 +12,7 @@ export function Card({ title, description, icon }: CardProps) {
       className='bg-gray-700 rounded overflow-hidden flex items-stretch gap-6 hover:bg-gray-600 transition-colors'
       href='#'
     >
-      <div className='bg-green-700 h-full p-6 flex items-center'>
+      <div className='bg-green-700 p-6 flex items-center'>
         {icon === 'fileArrow' ? (
           <FileArrowDown size={40} />
         ) : (
@@ -26,7 +26,7 @@ export function Card({ title, description, icon }: CardProps) {
         <p className='text-sm text-gray-200'>{description}</p>
       </div>
 
-      <div className='h-full p-6 flex items-center'>
+      <div className='h-full p-6 flex items-center mobile:my-auto'>
         <CaretRight size={24} />
       </div>
     </a>

@@ -8,9 +8,16 @@ interface LessonProps {
   slugLesson: string
   availableAt: Date
   type: 'live' | 'class'
+  toggleSidebar?(): void
 }
 
-export function Lesson({ title, slugLesson, availableAt, type }: LessonProps) {
+export function Lesson({
+  title,
+  slugLesson,
+  availableAt,
+  type,
+  toggleSidebar
+}: LessonProps) {
   const { slug } = useParams<{ slug: string }>()
 
   const isLessonAvailable = isPast(availableAt)
