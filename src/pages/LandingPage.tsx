@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom'
 import { Logo } from '../components/Logo'
 import { useCreateSubscriptionMutation } from '../graphql/generated'
 import codeImage from '../assets/code-image.png'
+import { Footer } from '../components/Footer'
 
 export function LandingPage() {
   const [name, setName] = useState('')
@@ -75,6 +76,8 @@ export function LandingPage() {
       </div>
 
       <img src={codeImage} className='mt-10' alt='' />
+
+      <Footer />
     </div>
   )
 }
